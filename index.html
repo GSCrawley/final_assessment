@@ -4,11 +4,11 @@
 		<title></title>
 	</head>
 	<body>
-        <link rel="stylesheet" type="text/css" href="final.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
 
 		<!-- Base Styles - Set the base styles for the page -->
 
-		<!-- <main> -->
+		<main>
 
 			<!-- navbar - Style the navbar -->
 			<section id="nav">
@@ -26,9 +26,11 @@
 
 			<!-- banner -->
 			<section>
-				<h1><blink-text time="1000">...Color.com is awesome...</blink-text></h1>
-			
+				<h1><blink-text time="1000">...Color.com is awesome...</ticker-tape></h1>
+                <h1><ticker-tape>...Color.com is awesome...</ticker-tape></h1>
+
             <script src="blink-text.js"></script>
+            <script src="ticker-tape.js"></script>
         </section>
 			<!-- section about - -->
 			<section id="about">
@@ -45,24 +47,17 @@
 			<section id="popular">
                 <div class="grid-container">
                     <div class="card">
-                        <p>Colored Pencils</p>
-                       <img src="images/600px-64_365_Color_Macro.jpg">
-                    
-                            
-            
-            </div>
+                        <div class="bg-img"><img src="images/600px-64_365_Color_Macro.jpg"></div>
+                        <div class="content"><p>Colored Pencils</p></div>
+                </div>
+                <div class="card">
+                    <div class="bg-img"><img src="images/600px-Nasir-al_molk.jpg"></div>
+                    <div class="content"><p>Color effect—sunlight shining through stained glass onto carpet (Nasir ol Molk Mosque located in Shiraz, Iran)</p></div>
+                </div>
 				<div class="card">
-					<img src="images/600px-Nasir-al_molk.jpg">
-                   
-                    <p>Color effect—sunlight shining through stained glass onto carpet (Nasir ol Molk Mosque located in Shiraz, Iran)</p>
-                
-            </div>
-				<div class="card">
-					<img src="images/600px-Chubb_Illusion.png">
-                    
-                    <p>Colors can appear different depending on their surrounding colors and shapes. The two small squares have exactly the same color, but the right one looks slightly darker, the Chubb illusion.</p>
-                
-            </div>
+					<div class="bg-img"><img src="images/600px-Chubb_Illusion.png"></div>
+                    <div class="content"><p>Colors can appear different depending on their surrounding colors and shapes. The two small squares have exactly the same color, but the right one looks slightly darker, the Chubb illusion.</p></div>
+                </div>
          </div>
 			</section>
 
@@ -132,41 +127,11 @@
 
 		</main>
 
-		<style>
-			.swatch {
-				width: 100px;
-				height: 100px;
-				background-color: antiquewhite;
-				margin: 2px;
-				border: 1px solid;
-			}
-
-			.swatches {
-				display: flex;
-				flex-wrap: wrap;
-			}
-
-			.swatch {
-				background-color: red !important;
-			}
-
-			main {
-				width: 600px;
-				margin: auto
-			}
-		</style>
-
+		
 
 		<script>
 			
-
-
-			// --color-sample-0 : red
-			// --color-sample-1 : green
-			// ...
-			// --color-sample-99 : blue
-
-			// make some swatches 
+			
 			const swatchCount = 100
 			for (let i = 0; i < swatchCount; i += 1) {
 				const swatch = `
